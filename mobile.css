@@ -1,0 +1,25 @@
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  .watch-showcase {
+    padding: 20px;
+    text-align: center;
+  }
+  .watch-showcase .watch-header {
+    display: block; /* Stack header elements vertically */
+    text-align: center;
+    padding: 10px;
+  }
+  .watch-showcase .watch-header h1 {
+    font-size: 28px;
+  }
+  .watch-showcase .watch-header p {
+    font-size: 16px;
+  }
+  .watch-showcase .watch-video {
+    margin-top: 20px;
+  }
+  .watch-showcase .watch-video video {
+    width: 100%; /* Make the video full width */
+    height: auto;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=mobile.css.map */

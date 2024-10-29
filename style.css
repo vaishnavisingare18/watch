@@ -1,0 +1,554 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar-list .navbar-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 14px 10px;
+  font-size: 14px;
+  display: block;
+  transition: color 0.3s;
+  gap: 10px;
+}
+.navbar .navbar-list .navbar-item a:hover {
+  color: #0071e3;
+}
+.navbar .navbar-list .navbar-item.logo {
+  font-size: 20px;
+}
+.navbar .navbar-list .navbar-item.logo a {
+  padding: 14px 5px;
+}
+.navbar .navbar-list .navbar-item.search, .navbar .navbar-list .navbar-item.bag {
+  font-size: 18px;
+}
+
+.watch-showcase {
+  max-width: 100%;
+  margin-right: 0;
+  padding: 40px;
+  background-color: #f5f5f7;
+  text-align: center;
+}
+.watch-showcase .watch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.watch-showcase .watch-header h1 {
+  font-size: 36px;
+  color: #1d1d1f;
+}
+.watch-showcase .watch-header p {
+  font-size: 18px;
+  color: #6e6e73;
+}
+.watch-showcase .watch-video {
+  margin-top: 30px;
+}
+.watch-showcase .watch-video video {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  outline: none;
+}
+
+.container {
+  text-align: center;
+}
+.container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.container .cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card {
+  border-radius: 20px;
+  width: 380px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+.card img {
+  width: 550px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.card.health {
+  border-color: #ff3b30;
+}
+.card.health .heart-rate {
+  margin-top: 10px;
+}
+.card.health .heart-rate p {
+  margin: 0;
+  font-size: 16px;
+}
+.card.health .heart-rate .bpm {
+  font-size: 36px;
+  color: #ff3b30;
+}
+.card .content {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 2;
+  color: white;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.card .content h2 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+.card .content p {
+  margin: 5px 0;
+  color: white;
+}
+.card .content:hover {
+  opacity: 1;
+}
+.card:hover .content {
+  bottom: 0;
+  opacity: 1;
+}
+
+.container2 {
+  text-align: center;
+  padding: 20px;
+}
+.container2 h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.container2 .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container2 .card {
+  background: #f5f5f7;
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.container2 .card img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.container2 .card:hover img {
+  transform: scale(1.05);
+}
+.container2 .card .dots {
+  margin: 15px 0;
+}
+.container2 .card .dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c7c7cc;
+  margin: 0 5px;
+}
+.container2 .card .dots .dot.active {
+  background-color: #007aff;
+}
+.container2 .card h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 15px 0 10px;
+}
+.container2 .card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+.container2 .card p.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.container2 .card .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.container2 .card .buttons .learn-more,
+.container2 .card .buttons .buy {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.container2 .card .buttons .learn-more:hover,
+.container2 .card .buttons .buy:hover {
+  background-color: #005bb5;
+}
+.container2 .card .buttons .buy {
+  background-color: #f5f5f7;
+  color: #007aff;
+  border: 1px solid #007aff;
+}
+.container2 .card .buttons .buy:hover {
+  background-color: #e5e5e7;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.comparison-container .comparison-column {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.comparison-container .comparison-column .feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  height: 250px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.comparison-container .comparison-column .feature i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.comparison-container .comparison-column .feature p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.comparison-container .comparison-column .feature:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-apple-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f5f5f7;
+}
+.why-apple-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+.why-apple-container .header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d1d1f;
+}
+.why-apple-container .header .shop-link {
+  font-size: 1rem;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.why-apple-container .cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+.why-apple-container .cards-container .card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 24%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.why-apple-container .cards-container .card i {
+  color: #1d1d1f;
+  margin-bottom: 15px;
+}
+.why-apple-container .cards-container .card h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+.why-apple-container .cards-container .card p {
+  font-size: 0.9rem;
+  color: #6e6e73;
+  margin-bottom: 20px;
+}
+.why-apple-container .cards-container .card .plus-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.why-apple-container .cards-container .card .plus-button i {
+  font-size: 1.2rem;
+  color: #1d1d1f;
+}
+.why-apple-container .cards-container .card .plus-button:hover {
+  color: #0071e3;
+}
+
+.apple-watch-essentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+.apple-watch-essentials .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+.apple-watch-essentials .header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d1d1f;
+}
+.apple-watch-essentials .header .accessories-link {
+  font-size: 1rem;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.apple-watch-essentials .essentials-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 10px;
+}
+.apple-watch-essentials .essentials-container .essential-item {
+  width: 48%;
+  background-color: #f5f5f7;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+.apple-watch-essentials .essentials-container .essential-item .text-container {
+  margin-bottom: 20px;
+}
+.apple-watch-essentials .essentials-container .essential-item .text-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+.apple-watch-essentials .essentials-container .essential-item .text-container p {
+  font-size: 1rem;
+  color: #6e6e73;
+  margin-bottom: 10px;
+}
+.apple-watch-essentials .essentials-container .essential-item .text-container .shop-link,
+.apple-watch-essentials .essentials-container .essential-item .text-container .learn-more-link {
+  font-size: 1rem;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.apple-watch-essentials .essentials-container .essential-item .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.apple-devices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+.apple-devices .content {
+  flex: 1;
+  padding-right: 10px;
+  text-align: left;
+}
+.apple-devices .image-container {
+  flex: -1;
+}
+
+.apple-watch-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: white;
+}
+.apple-watch-section .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.apple-watch-section .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+.apple-watch-section .content li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #333;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #666;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #121111;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-country {
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;
+  }
+  .navbar-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-item {
+    margin-bottom: 10px;
+  }
+  .navbar-item a {
+    padding: 10px;
+  }
+  .navbar-item.logo {
+    font-size: 18px;
+  }
+  .navbar-item.logo a {
+    padding: 10px 5px;
+  }
+  .navbar-item.search, .navbar-item.bag {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

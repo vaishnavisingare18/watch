@@ -1,0 +1,73 @@
+@media only screen and (min-width: 360px) and (max-width: 640px)   {
+  .navbar-list {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .navbar-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
+
+    .navbar-item a {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    .navbar-list::-webkit-scrollbar {
+        display: none; 
+    }
+
+    .navbar-list {
+        scrollbar-width: none; 
+    }
+    
+    
+    // --------------video
+
+    .watch-showcase {
+        padding: 20px;
+        text-align: center;
+
+        .watch-header {
+            display: block; /* Stack header elements vertically */
+            text-align: center;
+            padding: 10px;
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .watch-video {
+            margin-top: 20px;
+
+            video {
+                width: 100%; /* Make the video full width */
+                height: auto;
+                border-radius: 10px;
+            }
+        }
+    }
+    // ------------container-------
+   
+    
+
+    
+
+    // ------------
+
+    
+    
+    
+    
+    
+}
